@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .responsive-image {
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <h1>Responsive Image Example</h1>
+        <p>This image adapts to the screen size using the <code>srcset</code> attribute.</p>
+   
+        <img 
+            src="https://img.freepik.com/free-photo/beautiful-natural-view-landscape_23-2150787996.jpg" 
+            srcset="https://img.freepik.com/free-photo/beautiful-natural-view-landscape_23-2150787996.jpg 600w,
+            https://img.freepik.com/free-photo/beautiful-natural-view-landscape_23-2150787996.jpg 1024w,
+            https://img.freepik.com/free-photo/beautiful-natural-view-landscape_23-2150787996.jpg 1600w" 
+            sizes="(max-width: 600px) 100vw, 
+                   (max-width: 1024px) 50vw, 
+                   800px"
+            alt="Beautiful landscape" 
+            class="responsive-image">
+    </div>
+</body>
+</html>

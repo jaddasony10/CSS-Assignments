@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color and Backgrounds</title>
+    <style>
+        h1 {
+            color: #2c3e50; 
+            text-align: center;
+        }
+
+        h2 {
+            color: #e74c3c;
+        }
+
+        p {
+            color: #34495e;
+            font-size: 16px;
+        }
+        .section-background {
+            background-color: #f1c40f;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .gradient-background {
+            background: linear-gradient(45deg, #3498db, #9b59b6); 
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+        }
+        .background-image {
+            background-image: url('https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg'); /* Sample image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 50px;
+            color: white;
+            text-align: center;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .background-repeat {
+            background-image: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/camping-on-top-of-the-mountain-during-sunset-free-photo.jpg?w=600&quality=800'); /* Small image */
+            background-repeat: repeat;
+            padding: 50px;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin: 20px;
+        }
+
+        .background-position {
+            background-image: url('https://st.depositphotos.com/2001755/3622/i/450/depositphotos_36220949-stock-photo-beautiful-landscape.jpg');
+            background-position: bottom right;
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding: 50px;
+            color: white;
+            text-align: center;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Color and Background Properties</h1>
+
+    <h2>1. Color and Background Color</h2>
+    <div class="section-background">
+        <p>This section has a solid background color using <code>background-color</code> property.</p>
+    </div>
+
+    <h2>2. Gradient Background</h2>
+    <div class="gradient-background">
+        <p>This div has a background with a linear gradient from blue to purple.</p>
+    </div>
+
+    <h2>3. Background Image</h2>
+    <div class="background-image">
+        <p>This div uses a background image with no-repeat and centered position.</p>
+    </div>
+
+    <h2>4. Repeated Background Image</h2>
+    <div class="background-repeat">
+        <p>This section repeats a small background image across the entire container.</p>
+    </div>
+
+    <h2>5. Background Positioning</h2>
+    <div class="background-position">
+        <p>This div uses a background image positioned at the bottom-right corner.</p>
+    </div>
+</body>
+</html>

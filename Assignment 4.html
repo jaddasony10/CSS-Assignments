@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            margin: 20px;
+            padding: 20px;
+            border: 5px solid #3498db;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box {
+            box-sizing: content-box; 
+        }
+
+        .border-box {
+            box-sizing: border-box; 
+        }
+
+        .box-example {
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Box Model Demonstration</h1>
+
+    <h2>Content-Box Model</h2>
+    <div class="box box-example content-box">
+        <h3>Content-Box</h3>
+        <p>This box uses the <code>content-box</code> model. The width and height include only the content, not the padding or border.</p>
+        <p style="margin: 0;">Width: 200px (content only), Height: 100px (content only)</p>
+        <p style="margin: 0;">Padding: 20px, Border: 5px</p>
+    </div>
+
+    <h2>Border-Box Model</h2>
+    <div class="box box-example border-box">
+        <h3>Border-Box</h3>
+        <p>This box uses the <code>border-box</code> model. The width and height include the content, padding, and border.</p>
+        <p style="margin: 0;">Width: 200px (includes padding and border)</p>
+        <p style="margin: 0;">Padding: 20px, Border: 5px</p>
+    </div>
+
+    <h2>Margin, Border, and Padding Examples</h2>
+    <div class="box">
+        <h3>Box with Margin, Padding, and Border</h3>
+        <div class="box-example">
+            <p style="margin: 0;">This box has:</p>
+            <p style="margin: 0;">- <strong>Margin:</strong> 20px</p>
+            <p style="margin: 0;">- <strong>Border:</strong> 5px solid #3498db</p>
+            <p style="margin: 0;">- <strong>Padding:</strong> 20px</p>
+        </div>
+    </div>
+
+    <h2>Visualizing the Box Model</h2>
+    <div style="display: flex; justify-content: center;">
+        <div class="box" style="width: 200px; margin: 10px;">
+            <p style="margin: 0;">Content Area</p>
+            <p style="margin: 0;">(Width: 200px)</p>
+        </div>
+        <div class="box" style="width: 250px; margin: 10px;">
+            <p style="margin: 0;">Padding Area</p>
+            <p style="margin: 0;">(Includes padding and border)</p>
+        </div>
+    </div>
+
+</body>
+</html>

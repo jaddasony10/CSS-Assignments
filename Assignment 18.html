@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Example</title>
+    <style>
+        :root {
+            --primary-color: #3498db; 
+            --secondary-color: #2ecc71; 
+            --text-color: #333; 
+            --font-size: 16px; 
+            --heading-font-size: 2em; 
+            --padding: 15px; 
+            --margin: 20px; 
+            --border-radius: 5px; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: var(--margin);
+            background-color: #f4f4f4;
+            color: var(--text-color);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: var(--heading-font-size);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: var(--padding);
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--padding);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: var(--font-size);
+        }
+
+        button:hover {
+            background-color: var(--secondary-color); 
+        }
+
+        p {
+            font-size: var(--font-size);
+            margin-bottom: var(--margin);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Variables Demo</h1>
+    <div class="container">
+        <p>This is an example of using CSS variables to maintain consistency across your styles.</p>
+        <button>Click Me</button>
+    </div>
+
+</body>
+</html>

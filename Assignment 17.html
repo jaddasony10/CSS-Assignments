@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Forms Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #3498db;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        select:focus {
+            border-color: #2980b9; 
+            outline: none; 
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+       
+        .checkbox-label,
+        .radio-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+      
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2980b9; 
+        }
+
+        button:disabled {
+            background-color: #bdc3c7; 
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Styled Forms Demo</h1>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" required placeholder="Enter your name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="Enter your email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required placeholder="Enter your password">
+
+        <label>Gender</label>
+        <div class="radio-label">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+        </div>
+        <div class="radio-label">
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <label>Hobbies</label>
+        <div class="checkbox-label">
+            <input type="checkbox" id="hobby1" name="hobby1">
+            <label for="hobby1">Reading</label>
+        </div>
+        <div class="checkbox-label">
+            <input type="checkbox" id="hobby2" name="hobby2">
+            <label for="hobby2">Traveling</label>
+        </div>
+
+        <label for="country">Country</label>
+        <select id="country">
+            <option value="">Select your country</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+            <option value="au">Australia</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Grid Layout</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr; 
+            grid-template-rows: auto 300px auto; 
+            grid-template-areas:
+                "header header header"
+                "sidebar content extra"
+                "footer footer footer";
+            gap: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .header {
+            grid-area: header;
+            background-color: #ff6347;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #4682b4;
+            color: white;
+            padding: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #3cb371;
+            color: white;
+            padding: 20px;
+        }
+
+        .extra {
+            grid-area: extra;
+            background-color: #87ceeb;
+            color: white;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #ffdab9;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nested-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 10px;
+            background-color: #2e8b57;
+            padding: 10px;
+        }
+
+        .nested-item {
+            background-color: #8fbc8f;
+            color: black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .content .nested-item:first-child {
+            grid-column: 1 / 3; 
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">
+            Main Content Area
+            <div class="nested-grid">
+                <div class="nested-item">Nested Item 1 (spans across two columns)</div>
+                <div class="nested-item">Nested Item 2</div>
+                <div class="nested-item">Nested Item 3</div>
+            </div>
+        </div>
+        <div class="extra">Extra Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

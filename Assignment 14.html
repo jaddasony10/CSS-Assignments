@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            border-radius: 10px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+     
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); 
+                opacity: 1; 
+            }
+            50% {
+                transform: translateY(-30px); 
+                opacity: 0.8; 
+            }
+        }
+
+      
+        .box2 {
+            background-color: #e74c3c;
+            animation: colorChange 3s ease-in infinite alternate; 
+        }
+
+      
+        @keyframes colorChange {
+            0% {
+                background-color: #e74c3c; 
+            }
+            100% {
+                background-color: #3498db; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>CSS Animations Demo</h1>
+    <div class="box">Bounce!</div>
+    <div class="box box2">Color Change!</div>
+
+</body>
+</html>
